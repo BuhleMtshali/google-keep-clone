@@ -22,3 +22,4 @@ searchForm.addEventListener('click', () => {
     }
 })
 
+//removing the styles
