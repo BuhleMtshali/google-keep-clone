@@ -29,6 +29,7 @@ nav{
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .left-container-nav{
@@ -100,4 +101,8 @@ input[type="search"]{
     color: var(--light-mode-body-bg);
     font-weight: 600;
     font-size: 18px;
+}
+span.nav-icons, i.nav-icons{
+    font-size: 30px;
+    color: var(--dark-mode-icon-color);
 }
