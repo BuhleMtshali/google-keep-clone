@@ -25,7 +25,7 @@ searchForm.addEventListener('click', () => {
     }
 })
 
-//changing grid view
+//changing grid view between column and row
 let gridButton = document.getElementById('grid-control');
 gridButton.addEventListener('click', () => {
     if(gridButton.textContent === 'splitscreen'){
@@ -33,4 +33,10 @@ gridButton.addEventListener('click', () => {
     } else {
         gridButton.textContent = 'splitscreen'
     }
+})
+
+//adding function to the refresh icon
+let reloadButton = document.getElementById('reload');
+reloadButton.addEventListener('click', () => {
+    location.reload()
 })
