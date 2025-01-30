@@ -150,3 +150,11 @@ span.nav-icons, i.nav-icons{
     border-left: 3px solid yellow;
     cursor: pointer;
 }
+
+#test-tooltip{
+    display: none;
+    position: relative;
+    top: 70px;
+    right: 50px;
+    z-index: 1000;
+}

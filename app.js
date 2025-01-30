@@ -40,3 +40,14 @@ let reloadButton = document.getElementById('reload');
 reloadButton.addEventListener('click', () => {
     location.reload()
 })
+
+//setting up the text tooltip
+let settingTooltip = document.getElementById('setting-tooltip');
+let testTooltip = document.getElementById('test-tooltip')
+settingTooltip.addEventListener('click', () => {
+    if(testTooltip.style.display === 'none'){
+        testTooltip.style.display = 'block'
+    } else{
+        testTooltip.style.display = 'none'
+    }
+})
