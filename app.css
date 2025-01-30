@@ -10,8 +10,9 @@
     --dark-mode-search-bg:#525355;
     --dark-mode-icon-color:#9AA0A6;
     --dark-mode-brown-hover:#41331C;
+    --dark-mode-search-icon:#EAEAEB;
 }
 body{
     margin: 0;
-    background-color: var(--body-bg);
+    background-color: var(--dark-mode-body-bg);
 }
