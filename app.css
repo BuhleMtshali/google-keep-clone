@@ -96,6 +96,8 @@ input[type="search"]{
     color: var(--icon-color);
 }
 
- #search-icon-light{
-    color: red;
+::placeholder{
+    color: var(--light-mode-body-bg);
+    font-weight: 600;
+    font-size: 18px;
 }
