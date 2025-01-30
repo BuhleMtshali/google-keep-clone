@@ -25,3 +25,12 @@ searchForm.addEventListener('click', () => {
     }
 })
 
+//changing grid view
+let gridButton = document.getElementById('grid-control');
+gridButton.addEventListener('click', () => {
+    if(gridButton.textContent === 'splitscreen'){
+        gridButton.textContent  = 'grid_view'
+    } else {
+        gridButton.textContent = 'splitscreen'
+    }
+})
