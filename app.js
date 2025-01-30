@@ -11,6 +11,7 @@ menuBars.addEventListener('click', () => {
 // //adding functionality for the focus on the input element form
 let searchForm = document.getElementById('search-form');
 let searchIcon = document.getElementById('search-icon');
+let searchInput = document.getElementById('search-input');
 
 //event listner for listening
 searchForm.addEventListener('click', () => {
