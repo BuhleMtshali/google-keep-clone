@@ -1,7 +1,17 @@
 :root{
+    /* light mode colors */
     --font-family:"Poppins", serif;
-    --body-bg:whitesmoke;
-    --search-bar-bg:#F1F3F4;
+    --light-mode-body-bg:whitesmoke;
+    --light-mode-search-bar-bg:#F1F3F4;
     --icon-color:#5F6368;
-
+    --yellow-hover-color:#FEEFC3;
+    /* dark mode colors */
+    --dark-mode-body-bg:#202124;
+    --dark-mode-search-bg:#525355;
+    --dark-mode-icon-color:#9AA0A6;
+    --dark-mode-brown-hover:#41331C;
+}
+body{
+    margin: 0;
+    background-color: var(--body-bg);
 }
