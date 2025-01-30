@@ -199,3 +199,30 @@ li:hover{
 #apps-tooltip{
     display: none;
 }
+
+.tool{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.tool-text{
+    color: var(--dark-mode-search-icon);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+.tool-text .user-avatar{
+width: 20px;
+height: 20px;
+}
+.tool-img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    display: block;
+    margin: 0 auto;
+}
