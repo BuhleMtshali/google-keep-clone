@@ -18,8 +18,10 @@ searchForm.addEventListener('click', () => {
     searchForm.classList.toggle('focus-form')
     if(searchForm.classList.contains('focus-form')){
         searchIcon.style.color = '#5F6368'
+        searchInput.style.color = '#202124'
     } else{
         searchIcon.style.color = 'white'
+        searchInput.style.color = 'var(--light-mode-form-bg)'
     }
 })
 
