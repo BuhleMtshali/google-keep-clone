@@ -12,6 +12,7 @@
     --dark-mode-brown-hover:#41331C;
     --dark-mode-search-icon:#EAEAEB;
     --dark-mode-tooltip-apps-bg:#1B1B1B;
+    --dark-mode-menu-text:#E8EAED;
 }
 *:focus{
     outline: none;
@@ -259,12 +260,48 @@ height: 20px;
 }
 
 /* MAIN STYLES */
-
+main{
+    display: grid;
+    grid-column: 1fr 3fr;
+}
 /* STYLES FOR THE LEFT SIDE MENU */
 .left-menu-container{
-    width: 300px;
+    width: 280px;
     height: 100%;
-    background-color: #7B1FA2;
+    position: absolute;
+    top: 115px;
+    left: 45px;
+    
 }
 
+.menu-icons{
+    font-size: 33px;
+    padding: 0 12px;
+}
+
+.menu-text{
+    color: var(--dark-mode-menu-text);
+    font-size: 1.3rem;
+    letter-spacing: .0178571429em;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin: 0;
+    text-align: left;
+    margin-left: 14px;
+    
+}
+
+.inner-menu{
+    display: flex;
+    align-items: center;
+    padding:15px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.inner-menu:hover{
+    background-color: var(--dark-mode-brown-hover);
+}
 /* END OF SIDE STYLES */
