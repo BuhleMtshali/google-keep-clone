@@ -56,10 +56,10 @@ settingTooltip.addEventListener('click', () => {
 let appTooltipBtn = document.getElementById('app-tooltip-btn');
 let appTools = document.getElementById('apps-tooltip')
 appTooltipBtn.addEventListener('click', () => {
-    if(appTools.style.display === 'none'){
-        appTools.style.display = 'block'
+    if(appTools.style.visibility === 'hidden'){
+        appTools.style.visibility = 'visible'
     } else{
-        appTools.style.display = 'none'
+        appTools.style.visibility = 'hidden'
     }
 })
 
