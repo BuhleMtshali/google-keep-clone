@@ -15,6 +15,8 @@ menuBars.addEventListener('click', () => {
          menu.style.padding = '8px'
        
        })
+      
+
     } 
     else {
             menuBars.className = "fa-solid fa-x"
@@ -27,14 +29,11 @@ menuBars.addEventListener('click', () => {
              menu.style.borderRadius = '25px'
              menu.style.padding = '12px 0'
            
-           })
+           });
+           
     }
 
 })
-
-
-
-
 
 
 // //adding functionality for the focus on the input element form

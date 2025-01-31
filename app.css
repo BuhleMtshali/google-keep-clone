@@ -288,9 +288,12 @@ main{
     margin: 0;
     text-align: left;
     margin-left: 14px;
-    display: none;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     
 }
+
+
+
 
 .inner-menu{
     display: flex;
@@ -307,6 +310,8 @@ main{
     background-color: var(--dark-mode-brown-hover);
     font-weight: bold;
 }
+
+
 
 .active, .inner-menu:hover{
     background-color: var(--dark-mode-brown-hover);
