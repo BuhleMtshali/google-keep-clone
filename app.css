@@ -367,10 +367,12 @@ main{
     color: var(--dark-mode-icon-color);
 }
 
-.fa-thumbtack{
+.title-icons{
     font-size: 24px;
     color: var(--dark-mode-icon-color);
     cursor: pointer;
+    padding: 0 15px;
 }
+
 
 /* END OF MAIN NOTES CONTAINER */
