@@ -387,10 +387,35 @@ main{
 .note{
     padding: 12px 16px;
 }
+textarea{
+    resize: none;
+}
+#text-notes{
+    width: 100%;
+}
+
+.bottom-icons-container{
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .bottom-icons{
     width: 30px;
     height: 30px;
     padding: 8px;
+    font-size: 18px;
+    color: var(--dark-mode-icon-color);
+    cursor: pointer;
+}
+
+.close-btn{
+    background: none;
+    border: none;
+    color: var(--dark-mode-menu-text);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
 }
 /* END OF MAIN NOTES CONTAINER */
