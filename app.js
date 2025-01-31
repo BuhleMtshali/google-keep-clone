@@ -3,8 +3,8 @@ let menuBars = document.getElementById('menu-bars');
 let menuTexts = document.querySelectorAll('.menu-text');
 let innerMenu = document.querySelectorAll('.inner-menu')
 menuBars.addEventListener('click', () => {
-    if(menuBars.className === "fa-solid fa-bars"){
-        menuBars.className = "fa-solid fa-x"
+    if(menuBars.className === "fa-solid fa-x"){
+        menuBars.className = "fa-solid fa-bars"
         menuTexts.forEach((text) => {
         text.style.display = 'none'
        })
@@ -16,14 +16,14 @@ menuBars.addEventListener('click', () => {
        })
     } 
     else {
-            menuBars.className = "fa-solid fa-bars"
+            menuBars.className = "fa-solid fa-x"
             menuTexts.forEach((text) => {
             text.style.display = 'block'
         })
         innerMenu.forEach((menu) => {
             menu.style.width = '100%'
             //  menu.style.height = '48px'
-             menu.style.borderRadius = '18px'
+             menu.style.borderRadius = '25px'
              menu.style.padding = '15px 0'
            })
     }
