@@ -1,12 +1,41 @@
-//toggling the menu button
+//toggling the menu button and show of the texts
 let menuBars = document.getElementById('menu-bars');
+let menuTexts = document.querySelectorAll('.menu-text');
+let innerMenu = document.querySelectorAll('.inner-menu')
 menuBars.addEventListener('click', () => {
     if(menuBars.className === "fa-solid fa-bars"){
         menuBars.className = "fa-solid fa-x"
-    } else{
-        menuBars.className = "fa-solid fa-bars"
+        menuTexts.forEach((text) => {
+        text.style.display = 'none'
+       })
+       innerMenu.forEach((menu) => {
+        menu.style.width = '48px'
+         menu.style.height = '48px'
+         menu.style.borderRadius = '50%'
+         menu.style.padding = '8px'
+       })
+    } 
+    else {
+            menuBars.className = "fa-solid fa-bars"
+            menuTexts.forEach((text) => {
+            text.style.display = 'block'
+        })
+        innerMenu.forEach((menu) => {
+            menu.style.width = '100%'
+            //  menu.style.height = '48px'
+             menu.style.borderRadius = '18px'
+             menu.style.padding = '15px 0'
+           })
     }
+
+   
+
 })
+
+
+
+
+
 
 // //adding functionality for the focus on the input element form
 let searchForm = document.getElementById('search-form');
@@ -99,3 +128,4 @@ for(let i = 0; i < menuItems.length; i++){
         this.className += " active"
     })
 }
+
