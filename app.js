@@ -14,7 +14,7 @@ let searchIcon = document.getElementById('search-icon');
 let searchInput = document.getElementById('search-input');
 
 //event listner for listening
-searchForm.addEventListener('click', () => {
+searchForm.addEventListener('click', (e) => {
     searchForm.classList.toggle('focus-form')
     if(searchForm.classList.contains('focus-form')){
         searchIcon.style.color = '#5F6368'
@@ -23,7 +23,18 @@ searchForm.addEventListener('click', () => {
         searchIcon.style.color = 'white'
         searchInput.style.color = 'var(--light-mode-form-bg)'
     }
+    e.stopPropagation()
+    
 })
+
+//removing focus on the form
+document.addEventListener('click', (e) => {
+    if (!searchForm.contains(e.target)) {
+        searchForm.classList.remove('focus-form'); 
+        searchIcon.style.color = 'white';
+        searchInput.style.color = 'var(--light-mode-form-bg)';
+    }
+});
 
 //changing grid view between column and row
 let gridButton = document.getElementById('grid-control');
