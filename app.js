@@ -28,8 +28,6 @@ menuBars.addEventListener('click', () => {
            })
     }
 
-   
-
 })
 
 
