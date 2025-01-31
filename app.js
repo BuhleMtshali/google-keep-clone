@@ -44,22 +44,34 @@ reloadButton.addEventListener('click', () => {
 //setting up the text tooltip
 let settingTooltip = document.getElementById('setting-tooltip');
 let testTooltip = document.getElementById('test-tooltip')
-settingTooltip.addEventListener('click', () => {
+settingTooltip.addEventListener('click', (event) => {
     if(testTooltip.style.display === 'none'){
         testTooltip.style.display = 'block'
     } else{
         testTooltip.style.display = 'none'
     }
+
+    event.stopPropagation();
 })
+
+
 
 //setting the tooltip for the apps
 let appTooltipBtn = document.getElementById('app-tooltip-btn');
 let appTools = document.getElementById('apps-tooltip')
-appTooltipBtn.addEventListener('click', () => {
+appTooltipBtn.addEventListener('click', (event) => {
     if(appTools.style.visibility === 'hidden'){
         appTools.style.visibility = 'visible'
     } else{
         appTools.style.visibility = 'hidden'
     }
+
+    event.stopPropagation();
 })
 
+//hiding the tooltip clicking outside outside
+document.addEventListener('click', (e) => {
+    if(!appTools.contains(e.target) && e.target !== appTooltipBtn){
+        appTools.style.visibility = 'hidden';
+    }
+})
