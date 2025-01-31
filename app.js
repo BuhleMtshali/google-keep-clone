@@ -13,6 +13,7 @@ menuBars.addEventListener('click', () => {
          menu.style.height = '48px'
          menu.style.borderRadius = '50%'
          menu.style.padding = '8px'
+       
        })
     } 
     else {
@@ -24,7 +25,8 @@ menuBars.addEventListener('click', () => {
             menu.style.width = '100%'
             //  menu.style.height = '48px'
              menu.style.borderRadius = '25px'
-             menu.style.padding = '15px 0'
+             menu.style.padding = '12px 0'
+           
            })
     }
 
