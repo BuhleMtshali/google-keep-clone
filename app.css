@@ -261,12 +261,16 @@ height: 20px;
 
 /* MAIN STYLES */
 main{
-    display: grid;
-    grid-column: 1fr 3fr;
+    /* display: grid;
+    grid-column: 1fr 3fr; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vh;
+    align-items: center;
 }
 /* STYLES FOR THE LEFT SIDE MENU */
 .left-menu-container{
-    width: 280px;
+    width:  260px;
     height: 100%;
     position: absolute;
     top: 115px;
@@ -320,9 +324,22 @@ main{
 /* ↓ BEGINING OF MAIN NOTES CONTAINER */
 .main-notes-container{
     width: 100%;
-    min-width: 0;
     background-color: #7B1FA2;
-    margin-left: 260px;
+    position: relative;
+    left: 100%;
+    right: auto;
+    top: 80px;
+    transform: translate(-50%, -50%);
+    height: 100px;
+   
+    
 }
+
+/* styles for the input of the notes */
+ .notes-input{
+    height: 100px;
+    width: 500px;
+   
+} 
 
 /* END OF MAIN NOTES CONTAINER */
