@@ -324,18 +324,19 @@ main{
 /* ↓ BEGINING OF MAIN NOTES CONTAINER */
 .main-notes-container{
     width: 100%;
+    margin: 0 auto;
     position: relative;
     left: 100%;
     right: auto;
-    top: 80px;
+    top: 110px;
     transform: translate(-50%, -50%);
-    height: 100px; 
+   
    
 }
 
 /* styles for the input of the notes */
  .notes-input{
-    height: 136px;
+    height: auto;
     width: 600px;
     margin: 0 auto;
     background-color: rgb(32, 33, 36);
@@ -346,7 +347,7 @@ main{
     transition-timing-function: ease-in;
     border: 1px solid rgb(95, 99, 104);
     border-radius: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
 } 
 
 .title-container{
@@ -371,7 +372,7 @@ main{
     font-size: 24px;
     color: var(--dark-mode-icon-color);
     cursor: pointer;
-    padding: 0 15px;
+    padding: 15px;
     transition: all 0.3s ease-in-out;
     width: 25px;
     height: 25px;
@@ -380,7 +381,16 @@ main{
 
 .title-icons:hover{
     background-color: var(--dark-mode-brown-hover);
-    padding: 13px;
+    
 }
 
+.note{
+    padding: 12px 16px;
+}
+
+.bottom-icons{
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+}
 /* END OF MAIN NOTES CONTAINER */
