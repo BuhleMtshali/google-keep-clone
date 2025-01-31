@@ -305,4 +305,9 @@ main{
     background-color: var(--dark-mode-brown-hover);
     font-weight: bold;
 }
+
+.active, .inner-menu:hover{
+    background-color: var(--dark-mode-brown-hover);
+    font-weight: bold;
+}
 /* END OF SIDE STYLES */

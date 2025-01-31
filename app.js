@@ -86,3 +86,16 @@ document.addEventListener('click', (e) => {
         appTools.style.visibility = 'hidden';
     }
 })
+
+//function for adding an active class on the menu items
+let menuContainer = document.getElementById('menu-container');
+let menuItems = document.querySelectorAll('.inner-menu'); //getting all the elements under the container
+for(let i = 0; i < menuItems.length; i++){
+    menuItems[i].addEventListener('click', function () {
+        let currentItem = document.getElementsByClassName('active');
+        if(currentItem.length > 0){
+          currentItem[0].className = currentItem[0].className.replace(' active', "")
+        }
+        this.className += " active"
+    })
+}
