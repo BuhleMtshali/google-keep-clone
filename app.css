@@ -275,13 +275,13 @@ main{
 }
 
 .menu-icons{
-    font-size: 33px;
+    font-size: 28px;
     padding: 0 12px;
 }
 
 .menu-text{
     color: var(--dark-mode-menu-text);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: .0178571429em;
     font-weight: 500;
     line-height: 1.25rem;
@@ -303,5 +303,6 @@ main{
 
 .inner-menu:hover{
     background-color: var(--dark-mode-brown-hover);
+    font-weight: bold;
 }
 /* END OF SIDE STYLES */
