@@ -324,7 +324,6 @@ main{
 /* ↓ BEGINING OF MAIN NOTES CONTAINER */
 .main-notes-container{
     width: 100%;
-    background-color: #7B1FA2;
     position: relative;
     left: 100%;
     right: auto;
@@ -337,9 +336,18 @@ main{
 
 /* styles for the input of the notes */
  .notes-input{
-    height: 100px;
-    width: 500px;
-   
+    height: 136px;
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgb(32, 33, 36);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .20);
+    box-sizing: border-box;
+    transition-duration: 0.218s;
+    transition-property: background, border, opacity, box-shadow, transform;
+    transition-timing-function: ease-in;
+    border: 1px solid rgb(95, 99, 104);
+    border-radius: 8px;
+    overflow: hidden;
 } 
 
 /* END OF MAIN NOTES CONTAINER */
