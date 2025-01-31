@@ -329,9 +329,8 @@ main{
     right: auto;
     top: 80px;
     transform: translate(-50%, -50%);
-    height: 100px;
+    height: 100px; 
    
-    
 }
 
 /* styles for the input of the notes */
@@ -349,5 +348,29 @@ main{
     border-radius: 8px;
     overflow: hidden;
 } 
+
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.title{
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: var(--dark-mode-menu-text);
+}
+
+.title::placeholder{
+    color: var(--dark-mode-icon-color);
+}
+
+.fa-thumbtack{
+    font-size: 24px;
+    color: var(--dark-mode-icon-color);
+    cursor: pointer;
+}
 
 /* END OF MAIN NOTES CONTAINER */
