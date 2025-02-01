@@ -1,3 +1,13 @@
+//CREATING A FUNCTION FOR PUSHING OBJECTS
+
+
+
+
+
+
+
+
+
 //toggling the menu button and show of the texts
 let menuBars = document.getElementById('menu-bars');
 let menuTexts = document.querySelectorAll('.menu-text');
@@ -131,12 +141,13 @@ for(let i = 0; i < menuItems.length; i++){
 // togging the textarea
 const notesInputContainer = document.getElementById('notes-input');
 const addNotesContainer = document.getElementById('note-text-container');
-const hideableIcons = document.querySelectorAll('.hide-icon')
+const hideableIcons = document.querySelectorAll('.hide-icon');
+const pinTab = document.getElementById('pin-note')
 notesInputContainer.addEventListener('click', (e) => {
     e.stopPropagation() //helps with bubbling issues
     if(addNotesContainer.style.display === 'none'){
         addNotesContainer.style.display = 'block'
-       hideableIcons.forEach((icon) => {
+        hideableIcons.forEach((icon) => {
         icon.classList.remove('hide-icon')
         icon.classList.add('hide-input-icons')
        })

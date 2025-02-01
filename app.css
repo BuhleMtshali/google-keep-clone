@@ -385,6 +385,17 @@ main{
     border-radius: 50%;
 }
 
+.pin-note-hide{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pin-note-show{
+opacity: 1;
+visibility: visible;
+}
+
 .title-icons:hover{
     background-color: var(--dark-mode-brown-hover);
     
