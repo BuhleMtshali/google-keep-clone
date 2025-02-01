@@ -100,7 +100,7 @@ selectNoteBtn.addEventListener('click', function() {
     }
 })
 
-console.log(selectNoteBtn)
+
 
 
 
