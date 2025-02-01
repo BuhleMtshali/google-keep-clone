@@ -136,9 +136,17 @@ notesInputContainer.addEventListener('click', (e) => {
     e.stopPropagation() //helps with bubbling issues
     if(addNotesContainer.style.display === 'none'){
         addNotesContainer.style.display = 'block'
-       
+       hideableIcons.forEach((icon) => {
+        icon.classList.remove('hide-icon')
+        icon.classList.add('hide-input-icons')
+       })
     } else {
-        addNotesContainer.style.display = 'none'
+        addNotesContainer.style.display = 'none';
+        hideableIcons.forEach((icon) => {
+            icon.classList.remove('hide-input-icons')
+            icon.classList.add('hide-icon')
+        })
+       
     }
 })
 

@@ -543,6 +543,16 @@ main{
     visibility: visible;
 }
 
+.hide-input-icons{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hide-icon{
+    opacity: 1;
+    visibility: visible;
+}
 
 
 /* END OF MAIN NOTES CONTAINER */
