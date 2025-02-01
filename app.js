@@ -58,7 +58,7 @@ class NotesStorage {
 //creating the instance
 const myNotes = new NotesStorage();
 
-closeBtn.addEventListener('click', renderNotes)
+document.addEventListener('click', renderNotes)
 
 function renderNotes(){
     myNotes.addNotes(titleInputElement.value, notesElement.value);
