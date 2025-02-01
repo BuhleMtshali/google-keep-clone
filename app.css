@@ -267,11 +267,11 @@ main{
     display: flex;
     justify-content:space-between;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
 }
 /* STYLES FOR THE LEFT SIDE MENU */
 .left-menu-container{
-    /* width:  260px; */
+    width:  260px;
     /* height: 100%; */
     position: relative;
     top: 0px;
@@ -329,13 +329,13 @@ main{
     margin: 0 auto;
     max-width: 600px;
     margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    right: auto;
-    top: 24%;
-    transform: translate(-50%, -50%);
-   
-   
+    position: relative;
+    left: 10%;
+    top: 30px;
+    transform: translateX(-50%);
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
 }
 
 /* styles for the input of the notes */
@@ -422,4 +422,33 @@ textarea{
     font-weight: 600;
     cursor: pointer;
 }
+
+
+/* styles for rendering the notes */
+.notes-container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.individual-note{
+    flex-grow: 1;
+    flex-basis: 200;
+    background-color: #7B1FA2;
+    margin: 8px;
+    width: 240px;
+    background-color: rgb(32, 33, 36);
+    border: 1px solid rgb(95, 99, 104);
+    border-radius: 8px;
+    transition-duration: 0.218s;
+    height: fit-content;
+    color: var(--dark-mode-menu-text);
+    letter-spacing: .0142857143em;
+   font-size: 1.1rem;
+   font-weight: 400;
+   line-height: 1.25rem;
+   padding: 12px 16px;
+}
+
+
 /* END OF MAIN NOTES CONTAINER */
