@@ -86,6 +86,26 @@ function renderNotes(){
 
 
 
+
+
+
+//toggling the nav
+const navBarElement = document.getElementById('nav');
+const selectNoteBtn = document.getElementById('check-btn');
+const overlayContainer = document.getElementById('overlay-div');
+selectNoteBtn.addEventListener('click', function() {
+    navBarElement.classList.toggle('hide-nav')
+    if(navBarElement.classList.contains('hide-nav')){
+        overlayContainer.classList.add('show-overlay');
+        overlayContainer.classList.remove('overlay-div')
+    
+    } else {
+        overlayContainer.classList.add('overlay-div'); 
+        overlayContainer.classList.remove('show-overlay')
+    }
+})
+
+
 //toggling the menu button and show of the texts
 let menuBars = document.getElementById('menu-bars');
 let menuTexts = document.querySelectorAll('.menu-text');

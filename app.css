@@ -29,9 +29,7 @@ body{
 
 /* overlay styles */
 .overlay-div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: none;
     padding: 8px;
     height: 70px;
     width: 100%;
@@ -81,7 +79,20 @@ nav{
     border-bottom: 1px solid var(--dark-mode-form-bg);
     padding-bottom: 10px;
 }
+.hide-nav{
+    display: none;
+}
 
+.show-overlay{
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    height: 70px;
+    width: 100%;
+    z-index: 100000;
+}
 .left-container-nav{
     display: flex;
     align-items: center;
