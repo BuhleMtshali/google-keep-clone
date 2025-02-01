@@ -7,9 +7,12 @@ let noteContainer = document.getElementById('notes-container')
 //2. Creating a class
 class NotesStorage {
     constructor(){
-        this.arrayNotes = []
+        this.arrayNotes = [];
+        this.idCount = 0;
     
     }
+
+    
 
     addNotes(title, content){
         if(title === "" || content === ""){
@@ -17,8 +20,22 @@ class NotesStorage {
             return
         }
 
-        this.arrayNotes.push({title, content})
+        const newNote = {id: this.idCount++, title, content};
+        console.log("New Note Added:", newNote)
+        this.showNotes()
+
     }
+
+    // delete function
+    deleteNote(id){
+        this.arrayNotes = this.arrayNotes.filter((note) => {
+            note.id !== id;
+            console.log(`Note with ${id} deleted`)
+            this.showNotes()
+        })
+    }
+
+
 
     showNotes(){
         console.log("Notes:", this.arrayNotes);
@@ -58,7 +75,7 @@ class NotesStorage {
 //creating the instance
 const myNotes = new NotesStorage();
 
-document.addEventListener('click', renderNotes)
+closeBtn.addEventListener('click', renderNotes)
 
 function renderNotes(){
     myNotes.addNotes(titleInputElement.value, notesElement.value);
