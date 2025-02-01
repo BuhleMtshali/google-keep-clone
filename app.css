@@ -86,7 +86,6 @@ nav{
 
 .show-overlay{
     display: flex;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 8px 0;
@@ -108,7 +107,6 @@ nav{
     padding-right: 16px;
     cursor: pointer;
     position: absolute;
-
 }
 
 .google-keep-icon{
@@ -140,12 +138,11 @@ nav{
     padding: 12px 10px;
     border-radius: 10px;
     margin-left: 50px;  
-
 }
 
 #search-icon{
- font-size: 26px;
- padding-left: 5px;
+    font-size: 26px;
+    padding-left: 5px;
 }
 
 ::-webkit-search-cancel-button{
@@ -170,12 +167,12 @@ input[type="search"]{
     font-weight: 600;
     font-size: 18px;
 }
+
 span.nav-icons, i.nav-icons{
     font-size: 32px;
     color: var(--dark-mode-icon-color);
     padding: 0 15px;
     cursor: pointer;
-   
 }
 
 .right-side-container-nav{
@@ -221,7 +218,6 @@ span.nav-icons, i.nav-icons{
     display: none;
     position: absolute;
     top: 40px;
-    left: auto;
     right: -25px;
     z-index: 1000;
     background-color: var(--dark-mode-body-bg);
@@ -245,7 +241,7 @@ span.nav-icons, i.nav-icons{
 li{
     color: var(--dark-mode-search-icon);
     line-height: 1.25rem;
-    font-size: 0.9.5rem;
+    font-size: 0.95rem;
     text-align: left;
     font-weight: 400;
     padding: 5px 10px 5px 17px;
@@ -257,7 +253,6 @@ li:hover{
     background-color: var(--dark-mode-form-bg);
 }
 #apps-tooltip{
-    /* display: none; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -277,8 +272,6 @@ li:hover{
     visibility: hidden;
 }
 
-
-
 .tool{
     display: flex;
     flex-direction: column;
@@ -292,8 +285,7 @@ li:hover{
 
 .tool:hover{
     background-color: var(--dark-mode-form-bg);
-    translate: scale(1.2);
-   
+    transform: scale(1.2);
 }
 
 .tool-text{
@@ -304,8 +296,8 @@ li:hover{
     margin-bottom: 0;
 }
 .tool-text .user-avatar{
-width: 20px;
-height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 .tool-img{
@@ -313,31 +305,26 @@ height: 20px;
     height: 45px;
     object-fit: cover;
     object-position: center;
-    display: flex;
     display: block;
     margin: 0 auto;
 }
 
 /* MAIN STYLES */
 main{
-    /* display: grid;
-    grid-column: 1fr 3fr; */
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     margin: 0;
-    /* align-items: center; */
 }
+ 
 /* STYLES FOR THE LEFT SIDE MENU */
 .left-menu-container{
-    width:  260px;
+    width: 260px;
     height: 100%;
     position: relative;
-    top: 0px;
+    top: 0;
     left: 24px;
-    
-    
 }
 
 .menu-icons{
@@ -348,14 +335,13 @@ main{
 .menu-text{
     color: var(--dark-mode-menu-text);
     font-size: 1.2rem;
-    letter-spacing: .0178571429em;
+    letter-spacing: 0.0178571429em;
     font-weight: 500;
     line-height: 1.25rem;
     margin: 0;
     text-align: left;
     margin-left: 14px;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    
 }
 .inner-menu{
     display: flex;
@@ -363,7 +349,7 @@ main{
     padding: 12px 0;
     cursor: pointer;
     border: none;
-    border-radius:  25px;
+    border-radius: 25px;
     transition: all 0.3s ease-in-out;
     margin: 15px 0;
 }
@@ -373,17 +359,14 @@ main{
     font-weight: bold;
 }
 
-
-
 .active, .inner-menu:hover{
     background-color: var(--dark-mode-brown-hover);
     font-weight: bold;
 }
+
 /* END OF SIDE STYLES */
 
-/* ///////////////////////////////////////////////////////////////// */
-
-/* ↓ BEGINING OF MAIN NOTES CONTAINER */
+/* BEGINNING OF MAIN NOTES CONTAINER */
 .main-notes-container{
     width: 100%;
     height: 100%;
@@ -398,20 +381,17 @@ main{
     flex-wrap: nowrap;
 }
 
-/* styles for the input of the notes */
- .notes-input{
+/* STYLES FOR THE NOTES INPUT */
+.notes-input{
     height: auto;
     width: 600px;
     margin: 0 auto;
     background-color: rgb(32, 33, 36);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .20);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.20);
     box-sizing: border-box;
-    transition-duration: 0.218s;
-    transition-property: background, border, opacity, box-shadow, transform;
-    transition-timing-function: ease-in;
+    transition: background 0.218s ease-in, border 0.218s ease-in, opacity 0.218s ease-in, box-shadow 0.218s ease-in, transform 0.218s ease-in;
     border: 1px solid rgb(95, 99, 104);
     border-radius: 8px;
-    /* overflow: hidden; */
 } 
 
 .title-container{
@@ -450,16 +430,15 @@ main{
 }
 
 .pin-note-show{
-opacity: 1;
-visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .title-icons:hover{
     background-color: var(--dark-mode-brown-hover);
-    
 }
 
-/* for the container which contains the notes textarea &  close btn*/
+/* Container for the notes textarea & Close button */
 .note-text-container{
     display: none;
 }
@@ -496,36 +475,34 @@ visibility: visible;
     cursor: pointer;
 }
 
-
-/* styles for rendering the notes */
+/* STYLES FOR THE RENDERED NOTES */
 .notes-container{
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .individual-note{
     flex-grow: 1;
-    flex-basis: 200;
-    background-color: #7B1FA2;
-    margin: 8px;
-    max-width:280px;
+    flex-basis: 200px;
     background-color: rgb(32, 33, 36);
+    margin: 8px;
+    max-width: 280px;
     border: 1px solid rgb(95, 99, 104);
     border-radius: 8px;
-    transition-duration: 0.218s;
+    transition: background 0.218s ease-in, border 0.218s ease-in, opacity 0.218s ease-in, box-shadow 0.218s ease-in, transform 0.218s ease-in;
     height: fit-content;
     color: var(--dark-mode-menu-text);
-    letter-spacing: .0142857143em;
-   font-size: 1.1rem;
-   font-weight: 400;
-   line-height: 1.25rem;
-   padding: 14px 16px;
-   position: relative;
-   margin-top: 25px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .20);
+    letter-spacing: 0.0142857143em;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    padding: 14px 16px;
+    position: relative;
+    margin-top: 25px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.20);
 }
 
+/* Check button on note */
 .check-btn{
     position: absolute;
     top: -7px;
@@ -534,6 +511,7 @@ visibility: visible;
     height: 20px;
 }
 
+/* Pin tab */
 .pin-tab{
     position: absolute;
     top: 7px;
@@ -560,7 +538,7 @@ visibility: visible;
     transition: opacity 0.3s ease-in-out;
 }
 
-
+/* Edit icons container */
 .note-edits{
     display: flex;
     align-items: center;
@@ -568,7 +546,6 @@ visibility: visible;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
-    
 }
 
 .note-edit-icon{
@@ -581,7 +558,21 @@ visibility: visible;
     transition: all 0.3s ease-in-out;
 }
 
+/* New styles for archive, restore, and delete icons */
+.archive-note,
+.restore-note,
+.delete-note {
+    font-size: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
 
+.archive-note:hover,
+.restore-note:hover,
+.delete-note:hover {
+    color: var(--blue-icon-overlay-color);
+}
 
 .note-title, .note-text{
     margin: 0;
@@ -594,19 +585,19 @@ visibility: visible;
 
 /* HOVER STYLES FOR THE NOTES */
 
-/* for showing twhe check btn */
+/* Show check button on hover */
 .individual-note:hover #check-btn {
     opacity: 1;
     visibility: visible;
 }
 
-/* for showing the pin tab */
+/* Show pin tab on hover */
 .individual-note:hover #pin-tab{
     opacity: 1;
     visibility: visible;
 }
 
-/* for showing the notes edit icons */
+/* Show edit icons on hover */
 .individual-note:hover .note-edits{
     opacity: 1;
     visibility: visible;
@@ -627,6 +618,3 @@ visibility: visible;
     color: var(--dark-mode-menu-text);
     font-weight: 600;
 }
-
-
-/* END OF MAIN NOTES CONTAINER */
