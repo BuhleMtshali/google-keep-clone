@@ -84,12 +84,7 @@ function renderNotes(){
     notesElement.value = ''
 }
 
-
-
-
-
-
-//toggling the nav
+//toggling the nav to show the delete btn
 const navBarElement = document.getElementById('nav');
 const selectNoteBtn = document.getElementById('check-btn');
 const overlayContainer = document.getElementById('overlay-div');
@@ -104,6 +99,10 @@ selectNoteBtn.addEventListener('click', function() {
         overlayContainer.classList.remove('show-overlay')
     }
 })
+
+console.log(selectNoteBtn)
+
+
 
 
 //toggling the menu button and show of the texts
