@@ -327,7 +327,7 @@ main{
 .main-notes-container{
     width: 100%;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     position: relative;
     left: 10%;
@@ -388,14 +388,11 @@ main{
     
 }
 
-.note{
-    padding: 12px 16px;
-}
-textarea{
-    resize: none;
-}
 #text-notes{
-    width: 100%;
+    padding: 12px 10px;
+    resize: none;
+    width: 580px;
+    max-width: 600px;
 }
 
 .bottom-icons-container{
@@ -436,7 +433,7 @@ textarea{
     flex-basis: 200;
     background-color: #7B1FA2;
     margin: 8px;
-    max-width:240px;
+    max-width:250px;
     background-color: rgb(32, 33, 36);
     border: 1px solid rgb(95, 99, 104);
     border-radius: 8px;
@@ -491,13 +488,13 @@ textarea{
     color: var(--dark-mode-icon-color);
     cursor: pointer;
     margin: 0 18px 0 0;
-    padding: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     transition: all 0.3s ease-in-out;
 }
 
-.note-edit-icon:hover{
-    background-color: #93989E;
-}
+
 
 .note-title, .note-text{
     margin: 0;
