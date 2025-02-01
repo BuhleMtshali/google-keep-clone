@@ -128,3 +128,22 @@ for(let i = 0; i < menuItems.length; i++){
     })
 }
 
+// togging the textarea
+const notesInputContainer = document.getElementById('notes-input');
+const addNotesContainer = document.getElementById('note-text-container');
+notesInputContainer.addEventListener('click', (e) => {
+    e.stopPropagation() //helps with bubbling issues
+    console.log(e)
+    if(addNotesContainer.style.display === 'none'){
+        addNotesContainer.style.display = 'block'
+    } else {
+        addNotesContainer.style.display = 'none'
+    }
+})
+
+//hidng the texarea when a user taps on the document
+document.addEventListener('click', (event) => {
+    if(!addNotesContainer.contains(event.target) && event.target !== notesInputContainer){
+        addNotesContainer.style.display = 'none'
+    }
+})
