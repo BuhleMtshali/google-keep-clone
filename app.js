@@ -21,6 +21,7 @@ class NotesStorage {
         }
 
         const newNote = {id: this.idCount++, title, content};
+        this.arrayNotes.push(newNote)
         console.log("New Note Added:", newNote)
         this.showNotes()
 
@@ -28,11 +29,9 @@ class NotesStorage {
 
     // delete function
     deleteNote(id){
-        this.arrayNotes = this.arrayNotes.filter((note) => {
-            note.id !== id;
-            console.log(`Note with ${id} deleted`)
-            this.showNotes()
-        })
+        this.arrayNotes = this.arrayNotes.filter(note => note.id !== id); // to filter out the deleted note
+        console.log(`Note with ID ${id} deleted.`);
+        this.showNotes(); // render them
     }
 
 
@@ -61,6 +60,7 @@ class NotesStorage {
                             <i class="fa-solid fa-image note-edit-icon"></i>
                             <i class="fa-solid fa-box-archive note-edit-icon"></i>
                             <i class="fa-solid fa-ellipsis-vertical note-edit-icon"></i>
+                            <span class="material-icons note-edit-icon" data-id="${note.id}>delete</span>
                             </div>
                             </div>
 
@@ -68,6 +68,16 @@ class NotesStorage {
         })
 
         noteContainer.innerHTML = renderedNotes;
+
+        //event listner for the delete btn
+        document.querySelectorAll(".delete-note").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                const noteId = parseInt(e.target.getAttribute("data-id"));
+                myNotes.deleteNote(noteId);
+            });
+        });
+
+
     }
 
 }
@@ -100,9 +110,13 @@ selectNoteBtn.addEventListener('click', function() {
     }
 })
 
-
-
-
+//function for deleting a note
+const deleteBtn = document.getElementById('trash-btn');
+deleteBtn.addEventListener('click', deleteNoteFunction)
+function deleteNoteFunction(){
+    myNotes.deleteNote(id)
+    myNotes.showNotes()
+}
 
 
 //toggling the menu button and show of the texts
