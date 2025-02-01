@@ -51,8 +51,8 @@ class NotesStorage {
                             <i class="fa-solid fa-thumbtack" id="pin-tab"></i>
                             </div>
                             <!-- end of pin tab -->
-                            <h2 class="note-title" id="note-title">${note.title}</h2>
-                            <p class="note-text" id="note-text">${note.content}</p>
+                            <h2 class="note-title">${note.title}</h2>
+                            <p class="note-text" >${note.content}</p>
                             <div class="note-edits">
                             <i class="fa-solid fa-bell note-edit-icon"></i>
                             <i class="fa-regular fa-user note-edit-icon"></i>
@@ -60,23 +60,34 @@ class NotesStorage {
                             <i class="fa-solid fa-image note-edit-icon"></i>
                             <i class="fa-solid fa-box-archive note-edit-icon"></i>
                             <i class="fa-solid fa-ellipsis-vertical note-edit-icon"></i>
-                            <span class="material-icons note-edit-icon" data-id="${note.id}>delete</span>
+                            <i class="fa-solid fa-trash delete-note note-edit-icon" data-id="${note.id}"></i>
                             </div>
                             </div>
-
                             `
         })
 
         noteContainer.innerHTML = renderedNotes;
 
         //event listner for the delete btn
-        document.querySelectorAll(".delete-note").forEach((btn) => {
-            btn.addEventListener("click", (e) => {
+        noteContainer.addEventListener("click", (e) => {
+            if (e.target.classList.contains("delete-note")) {
                 const noteId = parseInt(e.target.getAttribute("data-id"));
                 myNotes.deleteNote(noteId);
-            });
+            }
         });
 
+
+    //toggling the nav to show the big delete btn
+    
+    noteContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("fa-circle-check")) {
+            const navBarElement = document.getElementById("nav");
+            const overlayContainer = document.getElementById("overlay-div");
+            navBarElement.classList.toggle("hide-nav");
+            overlayContainer.classList.toggle("show-overlay");
+        }
+    });
+    
 
     }
 
@@ -93,31 +104,6 @@ function renderNotes(){
     titleInputElement.value ='';
     notesElement.value = ''
 }
-
-//toggling the nav to show the delete btn
-const navBarElement = document.getElementById('nav');
-const selectNoteBtn = document.getElementById('check-btn');
-const overlayContainer = document.getElementById('overlay-div');
-selectNoteBtn.addEventListener('click', function() {
-    navBarElement.classList.toggle('hide-nav')
-    if(navBarElement.classList.contains('hide-nav')){
-        overlayContainer.classList.add('show-overlay');
-        overlayContainer.classList.remove('overlay-div')
-    
-    } else {
-        overlayContainer.classList.add('overlay-div'); 
-        overlayContainer.classList.remove('show-overlay')
-    }
-})
-
-//function for deleting a note
-const deleteBtn = document.getElementById('trash-btn');
-deleteBtn.addEventListener('click', deleteNoteFunction)
-function deleteNoteFunction(){
-    myNotes.deleteNote(id)
-    myNotes.showNotes()
-}
-
 
 //toggling the menu button and show of the texts
 let menuBars = document.getElementById('menu-bars');
