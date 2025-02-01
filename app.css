@@ -450,7 +450,7 @@ textarea{
    padding: 14px 16px;
    position: relative;
    margin-top: 25px;
-   
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .20);
 }
 
 .check-btn{
@@ -472,6 +472,7 @@ textarea{
 #pin-tab{
     font-size: 22px;
     color: var(--dark-mode-icon-color);
+    cursor: pointer;
 }
 #check-btn{
     font-size: 25px;
@@ -490,6 +491,12 @@ textarea{
     color: var(--dark-mode-icon-color);
     cursor: pointer;
     margin: 0 18px 0 0;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.note-edit-icon:hover{
+    background-color: #93989E;
 }
 
 .note-title, .note-text{
