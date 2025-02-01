@@ -131,11 +131,12 @@ for(let i = 0; i < menuItems.length; i++){
 // togging the textarea
 const notesInputContainer = document.getElementById('notes-input');
 const addNotesContainer = document.getElementById('note-text-container');
+const hideableIcons = document.querySelectorAll('.hide-icon')
 notesInputContainer.addEventListener('click', (e) => {
     e.stopPropagation() //helps with bubbling issues
-    console.log(e)
     if(addNotesContainer.style.display === 'none'){
         addNotesContainer.style.display = 'block'
+       
     } else {
         addNotesContainer.style.display = 'none'
     }
@@ -147,3 +148,4 @@ document.addEventListener('click', (event) => {
         addNotesContainer.style.display = 'none'
     }
 })
+
