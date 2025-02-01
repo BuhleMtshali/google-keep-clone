@@ -470,17 +470,28 @@ main{
     font-size: 22px;
     color: var(--dark-mode-icon-color);
     cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
 }
+
 #check-btn{
     font-size: 25px;
     color: var(--dark-mode-menu-text);
     cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
 }
+
 
 .note-edits{
     display: flex;
     align-items: center;
     justify-content: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
     
 }
 
@@ -504,4 +515,27 @@ main{
 .note-text{
     padding: 12px 0 25px 0;
 }
+
+/* HOVER STYLES FOR THE NOTES */
+
+/* for showing twhe check btn */
+.individual-note:hover #check-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* for showing the pin tab */
+.individual-note:hover #pin-tab{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* for showing the notes edit icons */
+.individual-note:hover .note-edits{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
 /* END OF MAIN NOTES CONTAINER */
