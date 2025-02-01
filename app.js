@@ -1,10 +1,71 @@
 //CREATING A FUNCTION FOR PUSHING OBJECTS
+//1.defining the variables
+let titleInputElement = document.getElementById('note-title');
+let notesElement = document.getElementById('text-notes')
+let closeBtn = document.getElementById('close-btn');
+let noteContainer = document.getElementById('notes-container')
+//2. Creating a class
+class NotesStorage {
+    constructor(){
+        this.arrayNotes = []
+    
+    }
 
+    addNotes(title, content){
+        if(title === "" || content === ""){
+            console.log('Title needs to be filled in');
+            return
+        }
 
+        this.arrayNotes.push({title, content})
+    }
 
+    showNotes(){
+        console.log("Notes:", this.arrayNotes);
+        let renderedNotes = '';
+        this.arrayNotes.forEach((note) => {
+            renderedNotes += `    
+                            <div class="individual-note">
+                            <!-- !check box to pull the drop drown by the nav bar -->
+                            <div class="check-btn">
+                            <i class="fa-solid fa-circle-check" id="check-btn"></i>
+                            </div>
+                            <!-- end of check btn -->
+                            <div class="pin-tab">
+                            <i class="fa-solid fa-thumbtack" id="pin-tab"></i>
+                            </div>
+                            <!-- end of pin tab -->
+                            <h2 class="note-title" id="note-title">${note.title}</h2>
+                            <p class="note-text" id="note-text">${note.content}</p>
+                            <div class="note-edits">
+                            <i class="fa-solid fa-bell note-edit-icon"></i>
+                            <i class="fa-regular fa-user note-edit-icon"></i>
+                            <i class="fa-solid fa-palette note-edit-icon"></i>
+                            <i class="fa-solid fa-image note-edit-icon"></i>
+                            <i class="fa-solid fa-box-archive note-edit-icon"></i>
+                            <i class="fa-solid fa-ellipsis-vertical note-edit-icon"></i>
+                            </div>
+                            </div>
 
+                            `
+        })
 
+        noteContainer.innerHTML = renderedNotes;
+    }
 
+}
+
+//creating the instance
+const myNotes = new NotesStorage();
+
+closeBtn.addEventListener('click', renderNotes)
+
+function renderNotes(){
+    myNotes.addNotes(titleInputElement.value, notesElement.value);
+    myNotes.showNotes()
+    titleInputElement.value ='';
+    notesElement.value = ''
+}
 
 
 
@@ -138,33 +199,37 @@ for(let i = 0; i < menuItems.length; i++){
     })
 }
 
-// togging the textarea
 const notesInputContainer = document.getElementById('notes-input');
 const addNotesContainer = document.getElementById('note-text-container');
 const hideableIcons = document.querySelectorAll('.hide-icon');
-const pinTab = document.getElementById('pin-note')
-notesInputContainer.addEventListener('click', (e) => {
-    e.stopPropagation() //helps with bubbling issues
-    if(addNotesContainer.style.display === 'none'){
-        addNotesContainer.style.display = 'block'
-        hideableIcons.forEach((icon) => {
-        icon.classList.remove('hide-icon')
-        icon.classList.add('hide-input-icons')
-       })
-    } else {
-        addNotesContainer.style.display = 'none';
-        hideableIcons.forEach((icon) => {
-            icon.classList.remove('hide-input-icons')
-            icon.classList.add('hide-icon')
-        })
-       
-    }
-})
 
-//hidng the texarea when a user taps on the document
+// Toggling the textarea and icons when clicking notesInputContainer
+notesInputContainer.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    
+    const isHidden = getComputedStyle(addNotesContainer).display === 'none';
+    addNotesContainer.style.display = isHidden ? 'block' : 'none';
+
+    hideableIcons.forEach((icon) => {
+        icon.classList.toggle('hide-icon');
+        icon.classList.toggle('hide-input-icons');
+    });
+});
+
+
+addNotesContainer.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+});
+
+// Hide textarea when clicking outside
 document.addEventListener('click', (event) => {
-    if(!addNotesContainer.contains(event.target) && event.target !== notesInputContainer){
-        addNotesContainer.style.display = 'none'
+    if (!notesInputContainer.contains(event.target) && !addNotesContainer.contains(event.target)) {
+        addNotesContainer.style.display = 'none';
+        
+        hideableIcons.forEach((icon) => {
+            icon.classList.add('hide-icon');
+            icon.classList.remove('hide-input-icons');
+        });
     }
-})
+});
 

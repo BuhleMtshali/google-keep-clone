@@ -565,5 +565,10 @@ visibility: visible;
     visibility: visible;
 }
 
+.current-time{
+    color: var(--dark-mode-menu-text);
+    font-weight: 600;
+}
+
 
 /* END OF MAIN NOTES CONTAINER */
