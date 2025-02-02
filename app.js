@@ -38,7 +38,7 @@ class NotesStorage {
     }
 
     if (this.archiveMode === true) {
-        this.archiveMode = false;
+        this.archiveMode = false
       }
 
     this.showNotes();
